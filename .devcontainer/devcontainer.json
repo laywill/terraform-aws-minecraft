@@ -1,0 +1,13 @@
+{
+    "name": "AOC22-devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/terraform": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/aws-cli": {
+			"version": "latest"
+		}
+	},
+    "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && pip install -r ${containerWorkspaceFolder}/requirements.txt"
+}
